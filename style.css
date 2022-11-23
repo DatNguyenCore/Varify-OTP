@@ -1,0 +1,234 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+
+@font-face {
+  font-family: "Geomanist";
+  font-weight: 500;
+  /* src: url(./fonts/Geomanist/Geomanist-Thin.otf);
+  src: url(./fonts/Geomanist/Geomanist-Light.otf);
+  src: url(./fonts/Geomanist/Geomanist-Regular.otf);
+  src: url(./fonts/Geomanist/Geomanist-Book.otf); */
+  src: url(./fonts/Geomanist/Geomanist-Medium.otf);
+  /* src: url(./fonts/Geomanist/Geomanist-Bold.otf); */
+  /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
+}
+
+@font-face {
+  font-family: "Geomanist";
+  font-weight: 400;
+  /* src: url(./fonts/Geomanist/Geomanist-Thin.otf);
+  src: url(./fonts/Geomanist/Geomanist-Light.otf);
+  src: url(./fonts/Geomanist/Geomanist-Regular.otf); */
+  src: url(./fonts/Geomanist/Geomanist-Book.otf);
+  /* src: url(./fonts/Geomanist/Geomanist-Medium.otf); */
+  /* src: url(./fonts/Geomanist/Geomanist-Bold.otf); */
+  /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
+}
+
+.root {
+  background-image: url("./imgs//desktop_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  font-family: "Geomanist";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  color: #000000;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #111111;
+  margin-bottom: 24px;
+}
+
+.description > span {
+  background: linear-gradient(to right, #c92bf7 0%, #eea159 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.input-digit-container {
+  position: relative;
+  margin: 0 16px;
+  width: 60px;
+  height: 56px;
+}
+
+.input-digit-dash::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, #cf40db, #e07692, #ec9c5f);
+  width: 100%;
+  height: 3px;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  border-radius: 3px;
+}
+
+.digit-group {
+  display: flex;
+  align-items: center;
+}
+
+.digit-group .input-digit {
+  border: none;
+  line-height: 39px;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Geomanist", sans-serif;
+  font-weight: 500;
+  width: 56px;
+  height: 56px;
+  outline: none;
+  color: #000000;
+  background-color: transparent;
+}
+
+.prompt {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #c82af7 6.3%,
+    #de7197 61.83%,
+    #eda058 92.82%
+  );
+  margin-left: 34px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: center;
+  transition: 0.5s;
+  color: white;
+  display: block;
+  outline: none;
+  font-weight: 400;
+  border: 0;
+  border-radius: 30px;
+  font-family: "Geomanist";
+  font-size: 16px;
+  height: 48px;
+}
