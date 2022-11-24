@@ -17,8 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let element of collection) {
     element.addEventListener("keyup", (event) => {
       const input = event.srcElement;
-      const value = event.target.value;
+      let value = event.target.value;
       const keyCode = event.keyCode;
+
+      if (typeof value === "string") {
+        value = value.charAt(value.length - 1);
+      }
 
       const isIgnoreChar = [
         "~",
@@ -89,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
+        input.value = value;
+
         if (classNameNext === "submit-btn") {
           document.getElementById(classNameNext).click();
           return;
@@ -100,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function onSubmit(event) {
+function onSubmit() {
   let arrInput = [];
 
   for (let element of collection) {
