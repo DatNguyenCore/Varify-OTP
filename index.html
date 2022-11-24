@@ -44,6 +44,7 @@
           data-group-name="digits"
           data-autosubmit="false"
           autocomplete="off"
+          onsubmit="onSubmit(event)"
         >
           <div class="input-group">
             <div class="input-digit-container">
@@ -100,7 +101,14 @@
               <div class="input-digit-dash"></div>
             </div>
           </div>
-          <button type="submit" id="submit-btn" class="btn">Xác nhận</button>
+          <button
+            type="button"
+            id="submit-btn"
+            class="btn"
+            onclick="onSubmit(event);"
+          >
+            Xác nhận
+          </button>
         </form>
       </section>
       <div class="footer">
@@ -120,37 +128,39 @@
     </div>
 
     <!-- modal success -->
-    <div class="modal-container">
-      <!-- <div class="modal modal-success">
+    <div id="modal-container-success" class="modal-container">
+      <div id="modal-success" class="modal modal-success">
         <img src="./imgs/success_icon.png" alt="success" class="icon-modal" />
         <p class="title-modal title-modal-success">Xác nhận thành công</p>
         <p class="title-description">
           Bạn đã cho phép tài xế được sử dụng tủ
           <strong class="onebox-modal">ONEBOX</strong>
         </p>
-        <button type="button" class="button-modal button-modal-success">
+        <button type="button" class="button-modal button-modal-success" onclick="onClose();">
           Đóng
         </button>
-      </div> -->
+      </div>
+    </div>
 
-      <!-- <div class="modal modal-error">
+    <div id="modal-container-error" class="modal-container">
+      <div id="modal-error" class="modal modal-error">
         <img src="./imgs/error_icon.png" alt="error" class="icon-modal" />
         <p class="title-modal title-modal-error">Xác nhận thất bại</p>
         <p class="title-description">Vui lòng kiếm tra lại mã xác nhận</p>
-        <button type="button" class="button-modal button-modal-error">
+        <button type="button" class="button-modal button-modal-error" onclick="onClose();">
           Đóng
-        </button>
-      </div> -->
+      </div>
+    </div>
 
-
-      <div class="modal modal-warning">
+    <div id="modal-container-warning" class="modal-container">
+      <div id="modal-warning" class="modal modal-warning">
         <img src="./imgs/warning_icon.png" alt="warning" class="icon-modal" />
         <p class="title-modal title-modal-warning">Yêu cầu đã được xác nhận</p>
-        <p class="title-description" style="text-align: center;">
+        <p class="title-description" style="text-align: center">
           Đơn hàng đã được xác nhận<br />
           Vui lòng kiểm tra lại!
         </p>
-        <button type="button" class="button-modal button-modal-warning">
+        <button type="button" class="button-modal button-modal-warning" onclick="onClose();">
           Đóng
         </button>
       </div>

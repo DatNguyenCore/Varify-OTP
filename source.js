@@ -1,6 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const collection = document.getElementsByClassName("input-digit");
+var collection = document.getElementsByClassName("input-digit");
 
+var modalContainerSuccess = document.getElementById("modal-container-success");
+var modalContainerError = document.getElementById("modal-container-error");
+var modalContainerWarning = document.getElementById("modal-container-warning");
+
+document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("form").onkeypress = function (e) {
     var key = e.charCode || e.keyCode || 0;
     if (key == 13) {
@@ -95,3 +99,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function onSubmit(event) {
+  let arrInput = [];
+
+  for (let element of collection) {
+    const inputValue = element.value;
+    arrInput.push(inputValue);
+  }
+
+  const LENGTH_INPUT = 4;
+  if (arrInput.length === LENGTH_INPUT) {
+    console.log("VALUE", arrInput.join(""));
+
+    // modalContainerSuccess.classList.add("modal-container-show");
+    modalContainerError.classList.add("modal-container-show");
+    // modalContainerWarning.classList.add("modal-container-show");
+  }
+
+  return false;
+}
+
+function onClose() {
+  modalContainerSuccess.classList.remove("modal-container-show");
+  modalContainerError.classList.remove("modal-container-show");
+  modalContainerWarning.classList.remove("modal-container-show");
+  return false;
+}

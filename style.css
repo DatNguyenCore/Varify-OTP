@@ -237,6 +237,7 @@ body {
   font-family: "Geomanist";
   font-size: 16px;
   height: 48px;
+  cursor: pointer;
 }
 
 .footer {
@@ -331,6 +332,12 @@ body {
   }
 }
 
+.modal-container-show {
+  opacity: 1 !important;
+  transition: all 0.5s ease-in-out;
+  z-index: 1 !important;
+}
+
 .modal-container {
   position: absolute;
   top: 0;
@@ -338,18 +345,26 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(7, 7, 7, 0.35);
-  z-index: 1;
+  z-index: -1;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.modal-container-show > .modal {
+  opacity: 1 !important;
+  transition: all 0.5s ease-in-out;
+  z-index: 2 !important;
+}
+
 .modal {
+  opacity: 0;
   padding: 32px;
   border-style: solid;
   border-width: 1.5px;
   border-color: #9bd23e;
-  z-index: 2;
+  z-index: -2;
   background-color: #f0ffdd;
   width: fit-content;
   display: flex;
@@ -430,6 +445,7 @@ body {
   padding-left: 48px;
   padding-right: 48px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .button-modal-success {
