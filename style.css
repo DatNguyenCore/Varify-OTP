@@ -114,6 +114,18 @@ body {
   /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
 }
 
+@font-face {
+  font-family: "Geomanist";
+  font-weight: 300;
+  /* src: url(./fonts/Geomanist/Geomanist-Thin.otf);
+  src: url(./fonts/Geomanist/Geomanist-Light.otf); */
+  src: url(./fonts/Geomanist/Geomanist-Regular.otf);
+  /* src: url(./fonts/Geomanist/Geomanist-Book.otf); */
+  /* src: url(./fonts/Geomanist/Geomanist-Medium.otf); */
+  /* src: url(./fonts/Geomanist/Geomanist-Bold.otf); */
+  /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
+}
+
 .root {
   background-image: url("./imgs//desktop_bg.png");
   background-position: center;
@@ -121,15 +133,18 @@ body {
   background-size: cover;
   height: 100vh;
   width: 100%;
-  justify-content: center;
-  align-items: center;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
@@ -157,6 +172,8 @@ body {
   text-align: center;
   color: #111111;
   margin-bottom: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .description > span {
@@ -231,4 +248,29 @@ body {
   font-family: "Geomanist";
   font-size: 16px;
   height: 48px;
+}
+
+.footer {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .icon {
+  height: 100px;
+}
+
+.footer .icon-group {
+  margin-bottom: 16px;
+}
+
+.footer .contact {
+  font-family: "Geomanist";
+  font-weight: 300;
+}
+
+.footer .phone-number {
+  font-family: "Geomanist";
+  font-weight: 500;
 }
