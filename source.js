@@ -118,9 +118,16 @@ function onSubmit() {
   if (arrInput.length === LENGTH_INPUT) {
     console.log("VALUE", arrInput.join(""));
 
-    modalContainerSuccess.classList.add("modal-container-show");
-    // modalContainerError.classList.add("modal-container-show");
-    // modalContainerWarning.classList.add("modal-container-show");
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        modalContainerSuccess.classList.add("modal-container-show");
+      })
+      .catch(() => {
+        modalContainerError.classList.add("modal-container-show");
+        // modalContainerWarning.classList.add("modal-container-show");
+      });
   }
 
   return false;
