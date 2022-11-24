@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let element of collection) {
     element.addEventListener("keyup", (e) => {
       const input = e.path[0];
-      console.log("values", e.keyCode);
 
       if (e.keyCode === 32) {
         // space
@@ -27,12 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
         (e.keyCode >= 96 && e.keyCode <= 105) ||
         e.keyCode === 39
       ) {
-        const classNameNext = input.getAttribute("data-next");
+        if (e.target.value) {
+          const classNameNext = input.getAttribute("data-next");
 
-        if (classNameNext === "submit-btn") {
-          document.getElementById(classNameNext).click();
-        } else {
-          document.getElementById(classNameNext).focus();
+          if (classNameNext === "submit-btn") {
+            document.getElementById(classNameNext).click();
+          } else {
+            document.getElementById(classNameNext).focus();
+          }
         }
       }
     });
