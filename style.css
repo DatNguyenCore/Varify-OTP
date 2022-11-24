@@ -274,3 +274,34 @@ body {
   font-family: "Geomanist";
   font-weight: 500;
 }
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
+    max-width: 360px;
+  }
+
+  .digit-group .input-digit {
+    line-height: 39px;
+    font-size: 32px;
+    font-weight: 500;
+    width: 48px;
+    height: 48px;
+  }
+
+  .input-digit-container {
+    margin: 0 10px;
+    width: 48px;
+  }
+}
