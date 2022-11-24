@@ -12,12 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for (let element of collection) {
     element.addEventListener("keyup", (event) => {
-      const input = event.path[0];
+      const input = event.srcElement;
       const value = event.target.value;
-
-      if (!value) {
-        return;
-      }
+      const keyCode = event.keyCode;
 
       const isIgnoreChar = [
         "~",
@@ -45,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ";",
         ":",
         "'",
-        "\"",
+        '"',
         ",",
         "<",
         ".",
@@ -59,25 +56,34 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      if (event.keyCode === 32) {
+      if (keyCode === 32) {
         // space
         input.value = "";
         return;
       }
 
-      if (event.keyCode === 8 || event.keyCode === 37) {
+      if (keyCode === 8 || keyCode === 37) {
         const classNamePrev = input.getAttribute("data-previous");
+
+        if (!classNamePrev) {
+          return;
+        }
+
         document.getElementById(classNamePrev).focus();
         return;
       }
 
       if (
-        (event.keyCode >= 48 && event.keyCode <= 57) ||
-        (event.keyCode >= 65 && event.keyCode <= 90) ||
-        (event.keyCode >= 96 && event.keyCode <= 105) ||
-        event.keyCode === 39
+        (keyCode >= 48 && keyCode <= 57) ||
+        (keyCode >= 65 && keyCode <= 90) ||
+        (keyCode >= 96 && keyCode <= 105) ||
+        keyCode === 39
       ) {
         const classNameNext = input.getAttribute("data-next");
+
+        if (!value) {
+          return;
+        }
 
         if (classNameNext === "submit-btn") {
           document.getElementById(classNameNext).click();
