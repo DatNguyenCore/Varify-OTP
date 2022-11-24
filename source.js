@@ -11,30 +11,80 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("digit-1").focus();
 
   for (let element of collection) {
-    element.addEventListener("keyup", (e) => {
-      const input = e.path[0];
+    element.addEventListener("keyup", (event) => {
+      const input = event.path[0];
+      const value = event.target.value;
 
-      if (e.keyCode === 32) {
+      if (!value) {
+        return;
+      }
+
+      const isIgnoreChar = [
+        "~",
+        "`",
+        "!",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "(",
+        ")",
+        "-",
+        "_",
+        "=",
+        "+",
+        "{",
+        "[",
+        "}",
+        "]",
+        "\\",
+        "|",
+        ";",
+        ":",
+        "'",
+        "\"",
+        ",",
+        "<",
+        ".",
+        ">",
+        "/",
+        "?",
+      ].includes(value);
+
+      if (isIgnoreChar) {
+        input.value = "";
+        return;
+      }
+
+      if (event.keyCode === 32) {
         // space
         input.value = "";
-      } else if (e.keyCode === 8 || e.keyCode === 37) {
+        return;
+      }
+
+      if (event.keyCode === 8 || event.keyCode === 37) {
         const classNamePrev = input.getAttribute("data-previous");
         document.getElementById(classNamePrev).focus();
-      } else if (
-        (e.keyCode >= 48 && e.keyCode <= 57) ||
-        (e.keyCode >= 65 && e.keyCode <= 90) ||
-        (e.keyCode >= 96 && e.keyCode <= 105) ||
-        e.keyCode === 39
-      ) {
-        if (e.target.value) {
-          const classNameNext = input.getAttribute("data-next");
+        return;
+      }
 
-          if (classNameNext === "submit-btn") {
-            document.getElementById(classNameNext).click();
-          } else {
-            document.getElementById(classNameNext).focus();
-          }
+      if (
+        (event.keyCode >= 48 && event.keyCode <= 57) ||
+        (event.keyCode >= 65 && event.keyCode <= 90) ||
+        (event.keyCode >= 96 && event.keyCode <= 105) ||
+        event.keyCode === 39
+      ) {
+        const classNameNext = input.getAttribute("data-next");
+
+        if (classNameNext === "submit-btn") {
+          document.getElementById(classNameNext).click();
+          return;
         }
+
+        document.getElementById(classNameNext).focus();
       }
     });
   }
