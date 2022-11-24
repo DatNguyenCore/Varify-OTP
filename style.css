@@ -267,6 +267,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .content {
+    margin-top: calc(100vh / -5);
+  }
+
   .title {
     font-size: 24px;
     line-height: 28px;
