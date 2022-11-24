@@ -112,8 +112,8 @@ function onSubmit(event) {
   if (arrInput.length === LENGTH_INPUT) {
     console.log("VALUE", arrInput.join(""));
 
-    // modalContainerSuccess.classList.add("modal-container-show");
-    modalContainerError.classList.add("modal-container-show");
+    modalContainerSuccess.classList.add("modal-container-show");
+    // modalContainerError.classList.add("modal-container-show");
     // modalContainerWarning.classList.add("modal-container-show");
   }
 
@@ -124,5 +124,13 @@ function onClose() {
   modalContainerSuccess.classList.remove("modal-container-show");
   modalContainerError.classList.remove("modal-container-show");
   modalContainerWarning.classList.remove("modal-container-show");
+  return false;
+}
+
+function onBackgroundPress({ srcElement }) {
+  if (!srcElement.className.split(" ").includes("modal")) {
+    onClose();
+  }
+
   return false;
 }
