@@ -31,58 +31,60 @@
           data-autosubmit="false"
           autocomplete="off"
         >
-          <div class="input-digit-container">
-            <input
-              class="input-digit"
-              type="text"
-              id="digit-1"
-              name="digit-1"
-              data-next="digit-2"
-              maxlength="1"
-              oninput="this.value = this.value.toUpperCase()"
-            />
-            <div class="input-digit-dash"></div>
-          </div>
-          <div class="input-digit-container">
-            <input
-              class="input-digit"
-              type="text"
-              id="digit-2"
-              name="digit-2"
-              data-next="digit-3"
-              data-previous="digit-1"
-              maxlength="1"
-              oninput="this.value = this.value.toUpperCase()"
-            />
-            <div class="input-digit-dash"></div>
-          </div>
+          <div class="input-group">
+            <div class="input-digit-container">
+              <input
+                class="input-digit"
+                type="text"
+                id="digit-1"
+                name="digit-1"
+                data-next="digit-2"
+                maxlength="1"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+              <div class="input-digit-dash"></div>
+            </div>
+            <div class="input-digit-container">
+              <input
+                class="input-digit"
+                type="text"
+                id="digit-2"
+                name="digit-2"
+                data-next="digit-3"
+                data-previous="digit-1"
+                maxlength="1"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+              <div class="input-digit-dash"></div>
+            </div>
 
-          <div class="input-digit-container">
-            <input
-              class="input-digit"
-              type="text"
-              id="digit-3"
-              name="digit-3"
-              data-next="digit-4"
-              data-previous="digit-2"
-              maxlength="1"
-              oninput="this.value = this.value.toUpperCase()"
-            />
-            <div class="input-digit-dash"></div>
-          </div>
+            <div class="input-digit-container">
+              <input
+                class="input-digit"
+                type="text"
+                id="digit-3"
+                name="digit-3"
+                data-next="digit-4"
+                data-previous="digit-2"
+                maxlength="1"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+              <div class="input-digit-dash"></div>
+            </div>
 
-          <div class="input-digit-container">
-            <input
-              class="input-digit"
-              type="text"
-              id="digit-4"
-              name="digit-4"
-              data-next="submit-btn"
-              data-previous="digit-3"
-              maxlength="1"
-              oninput="this.value = this.value.toUpperCase()"
-            />
-            <div class="input-digit-dash"></div>
+            <div class="input-digit-container">
+              <input
+                class="input-digit"
+                type="text"
+                id="digit-4"
+                name="digit-4"
+                data-next="submit-btn"
+                data-previous="digit-3"
+                maxlength="1"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+              <div class="input-digit-dash"></div>
+            </div>
           </div>
           <button type="submit" id="submit-btn" class="btn">Xác nhận</button>
         </form>
@@ -96,7 +98,9 @@
             class="icon icon-store"
           />
         </div>
-        <p class="contact">Tổng đài hỗ trợ: <strong class="phone-number">1800 6584</strong></p>
+        <p class="contact">
+          Tổng đài hỗ trợ: <a href="tel:18006584" class="phone-number">1800 6584</a>
+        </p>
       </div>
     </div>
     <script src="./source.js"></script>
