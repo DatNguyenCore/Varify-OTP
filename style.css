@@ -330,3 +330,145 @@ body {
     font-size: 12px;
   }
 }
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7, 7, 7, 0.35);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  padding: 32px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #9bd23e;
+  z-index: 2;
+  background-color: #f0ffdd;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  width: 350px;
+}
+
+.modal-success {
+  border-color: #9bd23e;
+  background-color: #f0ffdd;
+}
+
+.modal-error {
+  border-color: #fc3838;
+  background-color: #fae3e3;
+}
+
+.modal-warning {
+  border-color: #ff8616;
+  background-color: #fae3e3;
+}
+
+.icon-modal {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.title-modal {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  font-family: "Geomanist";
+  color: #659900;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.title-modal-success {
+  color: #659900;
+}
+
+.title-modal-error {
+  color: #fc3838;
+}
+
+.title-modal-warning {
+  color: #ff8616;
+}
+
+.title-description {
+  margin-bottom: 16px;
+  font-family: "Geomanist";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.onebox-modal {
+  font-weight: 500;
+}
+
+.button-modal {
+  text-align: center;
+  transition: 0.5s;
+  color: white;
+  display: block;
+  outline: none;
+  font-weight: 400;
+  border: 0;
+  border-radius: 30px;
+  font-family: "Geomanist";
+  height: 44px;
+  padding-left: 48px;
+  padding-right: 48px;
+  font-size: 16px;
+}
+
+.button-modal-success {
+  background-image: linear-gradient(to right, #51a939 6.3%, #95c33c 92.82%);
+}
+
+.button-modal-error {
+  background-image: linear-gradient(to right, #bf2626 6.3%, #f06060 92.82%);
+}
+
+.button-modal-warning {
+  background-image: linear-gradient(to right, #ff8616 6.3%, #f4ad6b 92.82%);
+}
+
+@media only screen and (max-width: 430px) {
+  .modal {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 24px;
+    max-width: 290px;
+  }
+
+  .icon-modal {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+
+  .title-modal {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .title-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .onebox-modal {
+    display: block;
+  }
+}

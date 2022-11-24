@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="icon"
+      sizes="192x192"
+      href="https://static.wixstatic.com/media/d0c6c1_db4d69146a0843109f5cc209c0f7fc81%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/d0c6c1_db4d69146a0843109f5cc209c0f7fc81%7Emv2.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://static.wixstatic.com/media/d0c6c1_db4d69146a0843109f5cc209c0f7fc81%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/d0c6c1_db4d69146a0843109f5cc209c0f7fc81%7Emv2.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://static.wixstatic.com/media/d0c6c1_db4d69146a0843109f5cc209c0f7fc81%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/d0c6c1_db4d69146a0843109f5cc209c0f7fc81%7Emv2.png"
+      type="image/png"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link href="./style.css" rel="stylesheet" />
     <title>ONEBOX - Xác nhận yêu cầu</title>
   </head>
@@ -99,10 +113,49 @@
           />
         </div>
         <p class="contact">
-          Tổng đài hỗ trợ: <a href="tel:18006584" class="phone-number">1800 6584</a>
+          Tổng đài hỗ trợ:
+          <a href="tel:18006584" class="phone-number">1800 6584</a>
         </p>
       </div>
     </div>
+
+    <!-- modal success -->
+    <div class="modal-container">
+      <!-- <div class="modal modal-success">
+        <img src="./imgs/success_icon.png" alt="success" class="icon-modal" />
+        <p class="title-modal title-modal-success">Xác nhận thành công</p>
+        <p class="title-description">
+          Bạn đã cho phép tài xế được sử dụng tủ
+          <strong class="onebox-modal">ONEBOX</strong>
+        </p>
+        <button type="button" class="button-modal button-modal-success">
+          Đóng
+        </button>
+      </div> -->
+
+      <!-- <div class="modal modal-error">
+        <img src="./imgs/error_icon.png" alt="error" class="icon-modal" />
+        <p class="title-modal title-modal-error">Xác nhận thất bại</p>
+        <p class="title-description">Vui lòng kiếm tra lại mã xác nhận</p>
+        <button type="button" class="button-modal button-modal-error">
+          Đóng
+        </button>
+      </div> -->
+
+
+      <div class="modal modal-warning">
+        <img src="./imgs/warning_icon.png" alt="warning" class="icon-modal" />
+        <p class="title-modal title-modal-warning">Yêu cầu đã được xác nhận</p>
+        <p class="title-description" style="text-align: center;">
+          Đơn hàng đã được xác nhận<br />
+          Vui lòng kiểm tra lại!
+        </p>
+        <button type="button" class="button-modal button-modal-warning">
+          Đóng
+        </button>
+      </div>
+    </div>
+
     <script src="./source.js"></script>
     <noscript>Trình duyệt không hỗ trợ JavaScript!</noscript>
   </body>
