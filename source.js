@@ -5,6 +5,16 @@ var modalContainerError = document.getElementById("modal-container-error");
 var modalContainerWarning = document.getElementById("modal-container-warning");
 
 document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("button");
+  for (button of buttons) {
+    button.addEventListener("mousedown", (event) => {
+      event.srcElement.classList.add("pressed");
+    });
+    button.addEventListener("mouseup", (event) => {
+      event.srcElement.classList.remove("pressed");
+    });
+  }
+
   document.getElementById("form").onkeypress = function (e) {
     var key = e.charCode || e.keyCode || 0;
     if (key == 13) {
