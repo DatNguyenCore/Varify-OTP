@@ -111,7 +111,7 @@ body {
 }
 
 .root {
-  background-image: url("./imgs//desktop_bg.png");
+  background-image: url("./imgs/desktop_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -267,6 +267,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .root {
+    background-image: url("./imgs/mobile_bg.png");
+  }
+
   .content {
     margin-top: calc(100vh / -5);
   }
