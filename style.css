@@ -90,37 +90,19 @@ video {
 @font-face {
   font-family: "Geomanist";
   font-weight: 500;
-  /* src: url(./fonts/Geomanist/Geomanist-Thin.otf);
-  src: url(./fonts/Geomanist/Geomanist-Light.otf);
-  src: url(./fonts/Geomanist/Geomanist-Regular.otf);
-  src: url(./fonts/Geomanist/Geomanist-Book.otf); */
   src: url(./fonts/Geomanist/Geomanist-Medium.otf);
-  /* src: url(./fonts/Geomanist/Geomanist-Bold.otf); */
-  /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
 }
 
 @font-face {
   font-family: "Geomanist";
   font-weight: 400;
-  /* src: url(./fonts/Geomanist/Geomanist-Thin.otf);
-  src: url(./fonts/Geomanist/Geomanist-Light.otf);
-  src: url(./fonts/Geomanist/Geomanist-Regular.otf); */
   src: url(./fonts/Geomanist/Geomanist-Book.otf);
-  /* src: url(./fonts/Geomanist/Geomanist-Medium.otf); */
-  /* src: url(./fonts/Geomanist/Geomanist-Bold.otf); */
-  /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
 }
 
 @font-face {
   font-family: "Geomanist";
   font-weight: 300;
-  /* src: url(./fonts/Geomanist/Geomanist-Thin.otf);
-  src: url(./fonts/Geomanist/Geomanist-Light.otf); */
   src: url(./fonts/Geomanist/Geomanist-Regular.otf);
-  /* src: url(./fonts/Geomanist/Geomanist-Book.otf); */
-  /* src: url(./fonts/Geomanist/Geomanist-Medium.otf); */
-  /* src: url(./fonts/Geomanist/Geomanist-Bold.otf); */
-  /* src: url(./fonts/Geomanist/Geomanist-Black.otf); */
 }
 
 body {
