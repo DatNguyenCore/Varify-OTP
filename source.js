@@ -128,7 +128,7 @@ function onClose() {
 }
 
 function onBackgroundPress({ srcElement }) {
-  if (!srcElement.className.split(" ").includes("modal")) {
+  if (!srcElement.className.split(" ").includes("resistance")) {
     onClose();
   }
 

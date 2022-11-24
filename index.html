@@ -129,10 +129,10 @@
 
     <!-- modal success -->
     <div id="modal-container-success" class="modal-container" onclick="onBackgroundPress(event)">
-      <div id="modal-success" class="modal modal-success">
-        <img src="./imgs/success_icon.png" alt="success" class="icon-modal" />
-        <p class="title-modal title-modal-success">Xác nhận thành công</p>
-        <p class="title-description">
+      <div id="modal-success" class="modal modal-success resistance">
+        <img src="./imgs/success_icon.png" alt="success" class="icon-modal resistance" />
+        <p class="title-modal title-modal-success resistance">Xác nhận thành công</p>
+        <p class="title-description resistance">
           Bạn đã cho phép tài xế được sử dụng tủ
           <strong class="onebox-modal">ONEBOX</strong>
         </p>
@@ -142,21 +142,21 @@
       </div>
     </div>
 
-    <div id="modal-container-error" class="modal-container">
-      <div id="modal-error" class="modal modal-error">
-        <img src="./imgs/error_icon.png" alt="error" class="icon-modal" />
-        <p class="title-modal title-modal-error">Xác nhận thất bại</p>
-        <p class="title-description">Vui lòng kiếm tra lại mã xác nhận</p>
+    <div id="modal-container-error" class="modal-container" onclick="onBackgroundPress(event)">
+      <div id="modal-error" class="modal modal-error resistance">
+        <img src="./imgs/error_icon.png" alt="error" class="icon-modal resistance" />
+        <p class="title-modal title-modal-error resistance">Xác nhận thất bại</p>
+        <p class="title-description resistance">Vui lòng kiếm tra lại mã xác nhận</p>
         <button type="button" class="button-modal button-modal-error" onclick="onClose();">
           Đóng
       </div>
     </div>
 
-    <div id="modal-container-warning" class="modal-container">
-      <div id="modal-warning" class="modal modal-warning">
-        <img src="./imgs/warning_icon.png" alt="warning" class="icon-modal" />
-        <p class="title-modal title-modal-warning">Yêu cầu đã được xác nhận</p>
-        <p class="title-description" style="text-align: center">
+    <div id="modal-container-warning" class="modal-container" onclick="onBackgroundPress(event)">
+      <div id="modal-warning" class="modal modal-warning resistance">
+        <img src="./imgs/warning_icon.png" alt="warning" class="icon-modal resistance" />
+        <p class="title-modal title-modal-warning resistance">Yêu cầu đã được xác nhận</p>
+        <p class="title-description resistance" style="text-align: center">
           Đơn hàng đã được xác nhận<br />
           Vui lòng kiểm tra lại!
         </p>
